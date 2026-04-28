@@ -1,0 +1,18 @@
+interface:
+  display_name: "OmniSet"
+  short_description: "Connect OmniSet to Claude, Codex, and ChatGPT through JoAi's hosted MCP app server."
+  icon_small: "https://pbs.twimg.com/profile_images/1819428487104454657/HS3g_7bM_400x400.jpg"
+  icon_large: "https://pbs.twimg.com/profile_images/1819428487104454657/HS3g_7bM_400x400.jpg"
+  brand_color: "#000000"
+  default_prompt: "List the OmniSet tools available in this app."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "joai-omniset"
+      description: "OmniSet MCP server by JoAi"
+      transport: "streamable_http"
+      url: "https://cortex.joai.ai/mcp/apps/omniset"
